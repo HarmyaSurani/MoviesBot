@@ -111,10 +111,10 @@ Name - {}
     START_TXT = """<b>Hey {}..
 
 I Am A⚡️ POWERFUL AUTOFILTER BOT...
-😎 ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ᴀs ᴀ ᴀᴜᴛᴏ-ғɪʟᴛᴇʀ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ....
-ɪᴛs ᴇᴀsʏ ᴛᴏ ᴜsᴇ ᴍᴇ: ᴊᴜsᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀs ᴀᴅᴍɪɴ, ᴛʜᴀᴛs ᴀʟʟ, ɪ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇs ᴛʜᴇʀᴇ...😎
+😎 You Can Use Me As A Auto-Filter In Your Group....
+It's Easy To Use Me : Just Add Me To Your Group As Admin, That's All, I Will Provide Movies There....
 
-⚠️ FOR MORE HELP CHECK HELP BUTTON..
+⚠️ FOR MORE HELP CHECK HELP BUTTON
 
 ©MAINTAINED BY : @FilmyBagNetwork</b>"""
 
@@ -208,7 +208,7 @@ _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛�
 • 𝖤𝗑𝖺𝗆𝗉𝗅𝖾 : /short https://google.com</b>"""
 
 
-    URLSHORTN_TXT = """<b>➤ 𝐇𝐞𝐥𝐩 : 𝖴𝗋𝗅 S𝗁𝗈𝗋𝗍e𝗇𝖾𝗋
+    URLSHORTN_TXT = """<b> Help : 𝖴𝗋𝗅 S𝗁𝗈𝗋𝗍e𝗇𝖾𝗋
 
 ⭕  Usage :
 - 𝚃𝚑𝚒𝚜 C𝚘𝚖𝚖𝚊𝚗𝚍 H𝚎𝚕𝚙𝚜 Y𝚘𝚞 T𝚘 S𝚑𝚘𝚛𝚝 A U𝚛𝚕 
@@ -249,9 +249,9 @@ _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛�
 
 ☀️  Search With Correct Spelling..
 
-☀️ Try To Search Movie With Year If The Bot Is Not Sending You Accurate Result....
+☀️ Try To Search Movie With Year If The Bot Is Not Sending You Accurate Result.
 
-☀️ Search Series In The Given From Example : Gotham S03E01 And S03E10..D..
+☀️ Search Series In The Given From Example : Gotham S03E01 And S03E10.
 
 ☀️ Search Movies  in The Given From Example :    
 (1) Avengers.. ✅
@@ -274,9 +274,9 @@ MALIK_PHH = """<b>Hay 👋 {}.... 🌷 ❤️
   
         😎 👉 <s>{}</s> 👈 😎
 
-😎 You Can Find 🔍 Movies / Series / Animes Etc. From Here. Enjoy 😉...
+😎 You Can Find 🔍 Movies / Series / Animes Etc. From Here. Enjoy 😉
 
-⚙ If There Is Any Problem With The Bot Then Contact The Owner..
+⚙ If There Is Any Problem With The Bot Then Contact The Owner.
 
 👉 If You Have Any Question Then Contact Us Below  👇</b>"""
 
@@ -305,15 +305,15 @@ ADG = """<b>Hay. {}..\n\nThank You For Adding Me In.. ❣️
 
 👉 If You Have Any Questions & Doubts About Using Me..\n Contact My Owner >> <a href=https://t.me/{}>Harmya Surani</a> </b>"""
 
-ADDG = """ʜᴇʏ..
+ADDG = """👋 Hey ..
 
-ɪᴍ ⚡️ ᴘᴏᴡᴇʀғᴜʟ ᴀᴜᴛᴏ-ғɪʟᴛᴇʀ ʙᴏᴛ...
-😎 ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ᴀs ᴀ ᴀᴜᴛᴏ-ғɪʟᴛᴇʀ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ....
-ɪᴛs ᴇᴀsʏ ᴛᴏ ᴜsᴇ ᴍᴇ: ᴊᴜsᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀs ᴀᴅᴍɪɴ, ᴛʜᴀᴛs ᴀʟʟ, ɪ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇs ᴛʜᴇʀᴇ...😎
+I Am ⚡️ Powerful Auto-Filter Bot.
+😎 You Can Use Me As A Auto-Filter In Your Group.
+It's Easy To Use Me : Just Add Me To Your Group As Admin, That's All, I Will Provide Movies There...😎
 
-⚠️ ᴍᴏʀᴇ ʜᴇʟᴘ ᴄʜᴇᴄᴋ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ..
+⚠️ For More Help Check Help Button
 
-©ᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ: FilmyBag Network"""
+©Maintain By : FilmyBag Network"""
 
 M_NNT_FND = """malik"""
 
@@ -321,30 +321,28 @@ M_NNT_FNDD = """malikb"""
 
 MALIK2 = """#verification_1
 
-<b>Hay.</b> {}. 
+<b>Hay</b> {} !
 
-ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ. ᴛᴀᴘ ᴏɴ ᴛʜᴇ ᴛʜᴇ ᴠᴇʀɪғʏ ʟɪɴᴋ🔗 ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ⌛️..\n\n<b>इस बॉट को इस्तेमाल करने के लिए आपको रोजाना 1 बार verify करना होगा नहीं तो आप इसका इस्तेमाल नहीं कर पाएंगे</b>"""
+You Are Not Verified Today. Tap On The Verify 🔗Link And Get Unlimited Access For Whole ⌛️Day.\n\n<bइस बॉट को इस्तेमाल करने के लिए आपको रोजाना 1 बार verify करना होगा नहीं तो आप इसका इस्तेमाल नहीं कर पाएंगे</b>"""
 
 SECOND_VERIFICATION_TEXT = """#verification 2
 
-<b>Hay. {}. 
+<b>Hay {} !
 
-ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ ᴛᴀᴘ ᴏɴ ᴛʜᴇ  ᴠᴇʀɪғʏ ʟɪɴᴋ 🖇️ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛᴏɴɪɢʜᴛ 12:00ᴀᴍ\n\n<b>इस बॉट को इस्तेमाल करने के लिए आपको रोजाना 1 बार verify करना होगा नहीं तो आप इसका इस्तेमाल नहीं कर पाएंगे</b>"""
+You Are Not Verified Today. Tap On The Verify 🔗Link And Get Unlimited Access For Whole ⌛️Day.\n\n<bइस बॉट को इस्तेमाल करने के लिए आपको रोजाना 1 बार verify करना होगा नहीं तो आप इसका इस्तेमाल नहीं कर पाएंगे</b>"""
 
 SECOND_VERIFICATION_TEXT = os.environ.get('SECOND_VERIFICATION_TEXT', SECOND_VERIFICATION_TEXT)
 
 
-MALIK7 = """Hay. {}. 
+MALIK7 = """Hay {}!
 
-ʏᴏᴜ ʜᴀᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ ғɪʀꜱᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ, ɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴛʜᴇ ᴜᴘᴄᴏᴍɪɴɢ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ...\n\nᴘʟᴇᴀꜱᴇ join ᴍʏ main ᴄʜᴀɴɴᴇʟ"""
+You Have Completed The Verification, Now You Can Get Unlimited Access For Whole Day.\n\nPlease Join My Main Channel 👇"""
 
 
 
-SECOND_VERIFY_COMPLETE_TEXT = """Hay. {}. 
+SECOND_VERIFY_COMPLETE_TEXT = """Hay {}!
 
-ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ᴠᴇʀɪғɪᴇᴅ ғᴏʀ ᴛᴏɴɪɢʜᴛ 12:00ᴀᴍ ... ᴇɴɪᴏʏ ʏᴏᴜʀ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ʏᴏᴜʀ ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ🧑‍🎤 ...
-
-ᴘʟᴇᴀꜱᴇ join ᴍʏ main ᴄʜᴀɴɴᴇʟ"""
+You Have Completed The Verification, Now You Can Get Unlimited Access For Whole Day.\n\nPlease Join My Main Channel 👇"""
 
 
 
