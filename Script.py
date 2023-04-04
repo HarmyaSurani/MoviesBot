@@ -9,20 +9,20 @@ class script(object):
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
 ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 ✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
+✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: LINODE
 ✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]
-✯ updates channel: <a href=https://t.me/filmyfunda_movies>CLICK HERE</a>""" 
+✯ updates channel: <a href=https://t.me/FilmyBagNetwork>CLICK HERE</a>""" 
     SOURCE_TXT = """<b>NOTE:</b>
-- <b>Thunder is a private project.
+- <b>FilmyBag Is A Private Bot.
 
 <b>DEVS:</b>
-- <a href=https://t.me/bhatmanju>jack sparrow</a>"""
+- <a href=https://t.me/harmya>Harmya Surani</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
 
 <b>NOTE:</b>
-1. thunder bot have admin privillage.
+1. filmybag bot have admin privillage.
 2. only admins can add filters in a chat.
 3. alert buttons have a limit of 64 characters.
 
@@ -41,7 +41,7 @@ class script(object):
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/bhatmanju)</code>
+<code>[Button Text](buttonurl:https://t.me/harmya)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
@@ -68,7 +68,7 @@ class script(object):
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
-these are the extra features of Thunder bot
+these are the extra features of FilmyBag bot
 
 <b>Commands and Usage:</b>
 • /id - <code>get id of a specified user.</code>
@@ -97,7 +97,7 @@ This module only works for my admins
 ★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
 ★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱
 ★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱
-★ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/bhatmanju>jack sparrow</a></b> """
+★ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/filmybag>jack sparrow</a></b> """
     LOG_TEXT_G = """#NewGroup
 Group = {}, {}
 Total Members = <code>{}</code>
@@ -116,7 +116,7 @@ Name - {}
 
 ⚠️ ᴍᴏʀᴇ ʜᴇʟᴘ ᴄʜᴇᴄᴋ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ..
 
-©ᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ: jack sparrow</b>"""
+©ᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ: Harmya</b>"""
 
     MALIK_TXT =  """<b>Donation</b>
 
@@ -133,7 +133,7 @@ Name - {}
 ✮ 𝗣𝗮𝘆𝗣𝗮𝗹
 
 _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛𝐨𝐮𝐭 𝐓𝐡𝐞 𝐏𝐚𝐲𝐦𝐞𝐧𝐭 𝐈𝐧𝐟𝐨_
-━━━━━━━━━━━━᚜ <a href=https://t.me/bhatmanju><b>jack sparrow</b></a> ᚛━━━━━━━━━━━━"""
+━━━━━━━━━━━━᚜ <a href=https://t.me/harmya><b>Harmya Surani</b></a> ᚛━━━━━━━━━━━━"""
     DINETTE_TXT =  """<b>Donation</b>
 
 
@@ -150,7 +150,7 @@ _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛�
 ✮ 𝗣𝗮𝘆𝗣𝗮𝗹
 
 _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛𝐨𝐮𝐭 𝐓𝐡𝐞 𝐏𝐚𝐲𝐦𝐞𝐧𝐭 𝐈𝐧𝐟𝐨_
-━━━━━━━━━━━━᚜ <a href=https://t.me/bhatmanju><b>jack sparrow</b></a> ᚛━━━━━━━━━━━━"""
+━━━━━━━━━━━━᚜ <a href=https://t.me/harmya><b>Harmya Surani</b></a> ᚛━━━━━━━━━━━━"""
     VIDEO_TXT ="""<b>𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚅𝙸𝙳𝙴𝙾 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚃𝚄𝙱𝙴.
 
 • 𝘜𝘴𝘢𝘨𝘦
@@ -233,9 +233,9 @@ _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛�
 
     OWNER_TXT = """<b>>━━━━᚜ Owner Details ᚛━━━━<
     
-⭕️ FULL NAME : jack sparrow
-⭕️ USERNAME: @bhatmanju
-⭕️PERMANENT DM LINK : <a href=https://t.me/bhatmanju>CLICK Here</a></b>"""
+⭕️ FULL NAME : Harmya Surani
+⭕️ USERNAME: @harmya
+⭕️PERMANENT DM LINK : <a href=https://t.me/harmya>CLICK Here</a></b>"""
 
     SPELLING_TEXT = """<u><b> jack sparrow </b></u>"""
 
