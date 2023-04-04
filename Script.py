@@ -287,13 +287,13 @@ ALURT_FND = """<b>Your 👉 {}❗️ spelling is not correct, please choose from
  ┗━━━━•❅•°•❈•°•❅•━ ━━┛
 """
 
-MNTFN = """<b>⭕️ ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɴᴏᴛ ғᴏᴜɴᴅ ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ. ʀᴇǫᴜᴇꜱᴛ ᴛᴏ ᴀᴅᴍɪɴ..
+MNTFN = """<b>⭕️ THIS MOVIE IS NOT AVAILABLE IN MY DATABASE. REQUEST TO ADMIN....
 
-⭕️ ಈ ಚಲನಚಿತ್ರವು ನನ್ನ ಡೇಟಾಬೇಸ್‌ನಲ್ಲಿ ಕಂಡುಬಂದಿಲ್ಲ. Admin ಗೆ ವಿನಂತಿಸಿ
+⭕️ ಈ ಚಲನಚಿತ್ರವು ನನ್ನ ಡೇಟಾಬೇಸ್‌ನಲ್ಲಿ ಕಂಡುಬಂದಿಲ್ಲ. Admin ಗೆ ವಿನಂತಿಸಿ....
 
-⭕️ ʏᴇ ᴍᴏᴠɪᴇ ʜᴀᴍᴀʀᴇ ᴅᴀᴛᴀʙᴀꜱᴇ ᴍᴇ ᴀᴠᴀɪʟᴀʙʟᴇ ɴᴀʜɪ ʜᴀɪ ɴɪᴄʜᴇ ᴀᴅᴍɪɴ ꜱᴇ ʀᴇǫᴜᴇꜱᴛ ᴋᴀʀᴇ... 
+⭕️ YE MOVIE HAMARE DATABASE ME NAHI HE ADMIN SE REQUEST KARE....
 
-⭕️ ʀᴇǫᴜᴇꜱᴛ ᴛᴏ ᴀᴅᴍɪɴ.. 👇</b>"""
+⭕️ REQUEST TO ADMIN HERE 👇</b>"""
 
 
 ADG = """<b>Hay. {}..\n\nThankyou For Adding Me In.. ❣️
