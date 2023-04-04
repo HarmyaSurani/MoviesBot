@@ -17,7 +17,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '977080'))
 API_HASH = environ.get('API_HASH', '0c20c4265501492a1513f91755acd42b')
-BOT_TOKEN = environ.get('BOT_TOKEN', '5518791018:AAEw4gv5PXWdfeZ37LBuifwApc91OppdKus')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5866784292:AAE0LvRISpM-ntEdAEm5cj-zfpAHhm0Axfc')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -44,7 +44,7 @@ DEL_SECOND = int(os.environ.get("DEL_SECOND", "300"))
 
 CREATOR_USERNAME = os.environ.get("CREATOR_USERNAME", "bhatmanju")
 CREATOR_NAME = os.environ.get("CREATOR_NAME", "jack sparrow")
-BOT_USERNAME = os.environ.get("BOT_USERNAME", "testmvsff_bot")
+BOT_USERNAME = os.environ.get("BOT_USERNAME", "Thunder_mvs_bot")
 
 
 auth_userss = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERSS', '').split()]
@@ -53,11 +53,11 @@ AUTH_USERSS = (auth_userss) if auth_userss else []
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 AUTO_DELETE2 = is_enabled((environ.get('AUTO_DELETE2', "True")), True)
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '399726799, 2083503061').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '399726799 905710386').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001785157194').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001689081917')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001577615410')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -72,17 +72,13 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 FILTER_BUTTONS = os.environ.get("FILTER_BUTTONS", "5")
 DB_AUTO_DELETE = is_enabled((environ.get('DB_AUTO_DELETE', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001363692085'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001896983424'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Filmyfunda_help_bot')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "False")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
 
-CUSTOM_FILE_CAPTION = '''<b>Join [Filmyfunda movies](https://t.me/filmyfunda_movies)for more updates</b>
-
-FILE : <code>{file_name}</code> 
-Size : <i>{file_size}</i>'''
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", CUSTOM_FILE_CAPTION)
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
                                   
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🏷 <b>Title</b>: <a href={url}>{title}</a>\n🎭<b> 𝐆𝐞𝐧𝐫𝐞𝐬​</b>: {genres}</a>\n📆 <b>𝐘𝐞𝐚𝐫​</b>: <a href={url}/releaseinfo>{year}</a></b>")
@@ -105,6 +101,26 @@ LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies 
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
+REQ_GRP = int(environ.get('REQ_GRP', '-1001721927830'))
+RQST_CHANNEL = int(environ.get('RQST_CHANNEL', '-1001807687265'))
 
-SHORTENER_API = environ.get("SHORTENER_API", "62a5fbe2c3a045501ad81ce90f7c9d909a5608e6")
-LONG_MEGHA_URL = environ.get("LONG_MEGHA_URL", False)
+
+
+SHORTENER_API = environ.get("SHORTENER_API", "4dadecb446ba12f3af2a3d01eb56ab2bf8baed4b")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "shorturllink.in")
+
+SHORTENER_API2 = environ.get("SHORTENER_API2", "694f8bd1b01b9f2a81b53a13a8b83e87f5f020d9")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "tnvalue.in")
+
+SHORT_URL = is_enabled((environ.get('SHORT_URL', "True")), True)
+TUTORIAL_LINK = environ.get("TUTORIAL_LINK", "https://t.me/filmyfunda_movies/72")
+
+MALIK = environ.get("malik", "https://telegra.ph/file/a35a995c9c411048adfab.jpg")
+MALIK5 = environ.get("malik5", "https://telegra.ph/file/a00c405a374d21ea7cfb7.jpg")
+
+TUTORIAL_LINK_2 = os.environ.get('TUTORIAL_LINK_2', 'https://t.me/filmyfunda_movies/73')
+TUTORIAL_LINK_1 = os.environ.get('TUTORIAL_LINK_1', 'https://t.me/filmyfunda_movies/72')
+
+BLACKLIST_WORDS=["il", "ayalam", "nada", "ugu", "movies", "Movies", ",", "episode", "Episode", "episodes", "web-series", "punjabi", "!", "kro", "jaldi", "bhai", "Audio", "audio", "language", "Language", "Hollywood", "All", "all", "bollywood", "Bollywood", "hd", "karo", "Karo", "fullepisode", "please", "plz", "Please", "Plz", "send", "link", "Link", "#request", ":", "'", "full", "Full", "movie", "Movie", "dubb", "dabbed", "dubbed", "season", "Season", "web", "series", "Web", "Series", "webseries", "WebSeries", "upload", "HD", "Hd", "bhejo", "ful", "Send", "Bhejo", "send maadi", "send madi", "kalisi"]
+
+

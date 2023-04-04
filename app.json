@@ -90,7 +90,7 @@
         "SHORTENER_API": {
             "description": "Your Shortner Api Token",
             "value": "iQ2iqO9EXFbcjek412Dg5j6stWu2",
-            "required": true
+            "required": false
         },
         "SUPPORT_CHAT": {
             "description": "Username of a Support Group / ADMIN. ( Should be username without @ and not ID)",
@@ -104,7 +104,7 @@
     "formation": {
         "worker": {
             "quantity": 1,
-            "size": "free"
+            "size": "eco"
         }
     }
 }

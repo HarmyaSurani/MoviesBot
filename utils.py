@@ -1,13 +1,15 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from info import CREATOR_USERNAME, CREATOR_NAME, FILTER_BUTTONS, AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM
-from imdb import IMDb
+from info import BLACKLIST_WORDS, CREATOR_USERNAME, CREATOR_NAME, FILTER_BUTTONS, AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORT_URL, SHORTENER_API, SHORTENER_API2, SHORTENER_WEBSITE, SHORTENER_WEBSITE2
+from imdb import Cinemagoer
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
 from pyrogram import enums
 from typing import Union
+from shortzy import Shortzy
 import re
 import os
+import shortzy 
 from datetime import datetime
 from typing import List
 from database.users_chats_db import db
@@ -20,7 +22,7 @@ BTN_URL_REGEX = re.compile(
     r"(\[([^\[]+?)\]\((buttonurl|buttonalert):(?:/{0,2})(.+?)(:same)?\))"
 )
 
-imdb = IMDb() 
+imdb = Cinemagoer() 
 
 BANNED = {}
 SMART_OPEN = '“'
@@ -40,6 +42,7 @@ class temp(object):
     SETTINGS = {}
     multi_buttons = int(FILTER_BUTTONS)
     NAME = CREATOR_NAME
+    USER_SPELL_CHECK = {}
     USERNAME = CREATOR_USERNAME
 
 async def is_subscribed(bot, query):
@@ -377,4 +380,25 @@ def humanbytes(size):
         size /= power
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
+
+
+async def get_shortlink(url, is_second_shortener=False):
+    if SHORT_URL:
+        if is_second_shortener:
+            api, site = SHORTENER_API2, SHORTENER_WEBSITE2
+        else:
+            api, site = SHORTENER_API, SHORTENER_WEBSITE
+
+        shortzy = Shortzy(api, site)
+        try:
+            url = await shortzy.convert(url)
+        except Exception as e:
+            url = await shortzy.get_quick_link(url)
+    return url
+
+async def replace_words(string):
+    prohibitedWords = BLACKLIST_WORDS
+    big_regex = re.compile(r'(\s?(' + '|'.join(map(re.escape, prohibitedWords)) + r')\b\s?)|(\s?\b(' + '|'.join(map(re.escape, prohibitedWords)) + r')\s?)')
+    formatted = big_regex.sub(lambda match: match.group().replace(match.group(2) or match.group(4), ""), string)
+    return formatted.replace("-"," ")
 

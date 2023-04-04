@@ -1,16 +1,19 @@
+pyrogram==2.0.35
+#pyrogram
 Tgcrypto
 Pymongo[srv]
-Motor
-Marshmallow
-Umongo
+Motor==2.5.1
+Marshmallow==3.14.1
+Umongo==3.0.1
+shortzy
 Requests
 Aiofiles
-imdbpy==2021.4.18
 googletrans==3.1.0a0 # Google Translater 
 gTTS # Google Translater
 youtube-dl
 ffmpeg
 youtube_search
+requests
 googletrans==3.1.0a0
 telegraph
 beautifulsoup4
@@ -25,6 +28,7 @@ yt-dlp
 pypng
 Pillow
 wget
+aiofiles
 psutil
 wheel
 humanize
@@ -32,13 +36,14 @@ ytthumb
 pypdf2
 PyPDF2
 pyshorteners
+aiofiles
+Pillow
+humanize
 hachoir
-pyrogram==2.0.35
-pymongo
-ujson
-telethon
-shortzy
-Heroku3
+TgCrypto
 dnspython
-bs4
+ujson
+pytz
 python-dotenv
+omdb
+git+https://github.com/cinemagoer/cinemagoer

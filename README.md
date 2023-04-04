@@ -46,7 +46,7 @@ You can deploy this bot anywhere.
 
 
 
-<a href="https://heroku.com/deploy?template=https://github.com/Btmanjusms/movies-house-bot-test">
+<a href="https://heroku.com/deploy?template=https://github.com/Bhatmanju307/movies-house-bot-test">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
@@ -83,6 +83,7 @@ python3 bot.py
 * /filters - view filters
 * /connect - connect to PM.
 * /disconnect - disconnect from PM
+/del_files - delete perticular movie index files
 * /del - delete a filter
 * /delall - delete all filters
 * /deleteall - delete all index(autofilter)

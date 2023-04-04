@@ -1,23 +1,28 @@
 # Kanged From @sahid malik 
 import asyncio
 import re, random
+import datetime
+import random
 import ast
 import math
+import string
+import contextlib
+import time
 from plugins.malik2.buttons import HSTN
-from plugins.malik.extra import GHHMT, IYGL, GOOGL, SONGS, RULES_ALERT, GROUP_Rules, SMART_PIC, STTS, MQTT, TEL, MQTTP, PPC, REPORT, PPI, SHARETXT, WALL, PURGE, MUTE, SS_ALERT, STKR, WRITE, FONTS, MY_DETALS
+from plugins.malik.extra import GHHMT, INST, IYGL, GOOGL, SONGS, RULES_ALERT, GROUP_Rules, SMART_PIC, STTS, MQTT, TEL, MQTTP, PPC, REPORT, PPI, SHARETXT, WALL, PURGE, MUTE, SS_ALERT, STKR, WRITE, FONTS, MY_DETALS, MQTTTM
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script, ALURT_FND, ADDG
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from plugins import malik 
-from info import ADMINS, DEL_SECOND, AUTH_CHANNEL, VIDEO_VD, AUTH_USERS, PICS, M_NT_F, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from info import RQST_CHANNEL, ADMINS, DEL_SECOND, AUTH_CHANNEL, VIDEO_VD, AUTH_USERS, PICS, M_NT_F, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, REQ_GRP, TUTORIAL_LINK_1, TUTORIAL_LINK_2, REQ_GRP 
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, Message
 from pyrogram import Client, filters, enums 
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
-from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings
-from database.users_chats_db import db, get_shortlink
+from utils import replace_words, get_shortlink, get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings
+from database.users_chats_db import db
 from database.ia_filterdb import Media, get_file_details, get_search_results
 from database.filters_mdb import (
     del_all,
@@ -34,13 +39,125 @@ SPELL_CHECK = {}
 
 
 
-@Client.on_message(filters.group & filters.text & filters.incoming)
+@Client.on_message(filters.group & filters.text & filters.incoming &~ filters.chat(REQ_GRP))
 async def give_filter(client, message):
-    settings = await get_settings(message.chat.id)
-    if settings['manual_filter']:
-        await manual_filters(client, message)
-    if settings['auto_filters']:
+    k = await manual_filters(client, message)
+    if k == False:
         await auto_filter(client, message)
+
+
+
+@Client.on_message(filters.text & filters.group & filters.incoming & filters.chat(REQ_GRP))
+async def req_grp_results(bot, msg: Message):
+    if msg.text.startswith("/"): return
+    if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", msg.text):
+        return
+    files = None
+    if 2 < len(msg.text) < 100:
+        search = msg.text
+        files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
+
+    if not files:
+
+        # request movie from admin
+        msg_id = msg.id
+        user_id = msg.from_user.id
+        user_name = msg.from_user.mention
+        user_query = msg.text
+        reply = search.replace(" ", '+')
+        reply_markup1 = [
+            [
+                InlineKeyboardButton("🔍 Click here to Check Spilling ✅", url=f"https://www.google.com/search?q={reply}+movie"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Updated  ✅",
+                    callback_data=f'rq#up#{msg_id}#{user_query}',
+                ),
+                InlineKeyboardButton(
+                    text="Already uploaded ✅",
+                    callback_data=f'rq#au#{msg_id}#{user_query}',
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Not released in OTT yet",
+                    callback_data=f'rq#nr#{msg_id}#{user_query}',
+                ),            
+                InlineKeyboardButton(
+                    text="Not Available in hindi",
+                    callback_data=f'rq#ntaih#{msg_id}#{user_query}',
+                ),    
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Not Dubb in hindi",
+                    callback_data=f'rq#ntdih#{msg_id}#{user_query}',
+                ), 
+                InlineKeyboardButton(
+                    text="Not Available in kannada",
+                    callback_data=f'rq#ntaik#{msg_id}#{user_query}',
+                ),                       
+
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Already uploaded ✅",
+                    callback_data=f'rq#alupd#{msg_id}#{user_query}',
+                ),
+                InlineKeyboardButton(
+                    text="Go to Google check your spelling",
+                    callback_data=f'rq#cysp#{msg_id}#{user_query}',
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Not released yet",
+                    callback_data=f'rq#nry#{msg_id}#{user_query}',
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Send imdb Link",
+                    callback_data=f'rq#simd#{msg_id}#{user_query}',
+                ),
+                InlineKeyboardButton(
+                    text="Not available",
+                    callback_data=f'rq#na#{msg_id}#{user_query}',
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Close",
+                    callback_data="close_data"          
+                ),
+            ],
+        ]
+        await bot.send_message(RQST_CHANNEL, text=f"#MovieRequest\n\nGroup 1 👉 <a href=https://t.me/+gMx2ry12kODI1>Click Here</a>\n\nGroup 2 👉 <a href=https://t.me/+ulaVbqKvS3NjU9>Click Here</a>\n\nUser <b>{user_name}</b>\n\nrequested for <code>{user_query}</code>\n\nReply to <code>/pm {user_id} {msg_id} message</code>`\n\nView message 👉 <a href=https://t.me/+jk7skw3kIU45MGE1/{msg_id}>Click Here</a>\n😎", reply_markup=InlineKeyboardMarkup(reply_markup1))
+
+        user_info = temp.USER_SPELL_CHECK.get(msg.from_user.id)
+        if not user_info or time.time() - user_info >= 60:
+            temp.USER_SPELL_CHECK[msg.from_user.id] = time.time()
+            reply = search.replace(" ", '+')
+            reply_markup = InlineKeyboardMarkup([[
+            InlineKeyboardButton("ɪɴsᴛʀᴜᴄᴛɪᴏɴs", callback_data='inst'),
+            InlineKeyboardButton("ᴅᴏɴᴀᴛɪᴏɴ", url="https://t.me/donation_for_service/3")
+            ],[
+            InlineKeyboardButton("🔍 ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴇᴄᴋ sᴘɪʟʟɪɴɢ ✅", url=f"https://www.google.com/search?q={reply}+movie")
+            ]]  
+            )
+            a = await msg.reply_photo(
+                photo=(MQTTP),
+                caption=(MQTTTM.format(msg.from_user.mention, search)),
+                reply_markup=reply_markup                 
+            )
+            await asyncio.sleep(30)
+            await a.delete()
+        return
+
+    await msg.reply(f'<b>Dear.</b> {msg.from_user.mention}  \n\n👉 <code>{total_results}</code> 👈 <b>results are already available for your request</b> 👉 <code>{search}</code> 👈 <b>in our bot..\n\n plz Go back our group and type movie name</b> 👇',  reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔹 Movies request group🔹",url="https://t.me/+Zcwr0lahhRA3NTNl"),]]),parse_mode=enums.ParseMode.HTML),
+
 
 
 @Client.on_callback_query(filters.regex(r"^next"))
@@ -71,7 +188,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"⚡️{get_size(file.file_size)}» {file.file_name}", url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -83,8 +200,8 @@ async def next_page(bot, query):
                     text=f"{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"⚡️{get_size(file.file_size)}»",
-                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    text=f"{get_size(file.file_size)}",
+                    callback_data=f'files_#{file.file_id}',
                 ),
             ]
             for file in files
@@ -347,6 +464,47 @@ async def cb_handler(client: Client, query: CallbackQuery):
             alert = alert.replace("\\n", "\n").replace("\\t", "\t")
             await query.answer(alert, show_alert=True)
     if query.data.startswith("file"):
+
+        # User Verifying
+        user_id = query.from_user.id
+        is_second_shortener = await db.use_second_shortener(user_id)
+        if not await db.is_user_verified(user_id) or is_second_shortener:
+
+            verify_id = "".join(
+                random.choices(string.ascii_uppercase + string.digits, k=7)
+            )
+
+            await db.create_verify_id(user_id, verify_id)
+
+            how_to_download_link = (
+                TUTORIAL_LINK_2 if is_second_shortener else TUTORIAL_LINK_1
+            )
+
+            buttons = [
+                [
+                    InlineKeyboardButton(
+                        text="🔹 Click hare to Verify 🔹",
+                        url=await get_shortlink(
+                            f"https://telegram.me/{temp.U_NAME}?start=notcopy_{user_id}_{verify_id}",
+                            is_second_shortener,
+                        ),
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        text="🌀 How to verify 🌀", url=how_to_download_link
+                    )
+                ],
+            ]
+
+            text = f"You'r not verified today. Please verify now and get unlimited access for 1 day)"
+            if query.message.chat.type == "private":
+                return await query.message.reply_text(
+                    text, reply_markup=InlineKeyboardMarkup(buttons)
+                )
+
+        # User Verifying
+
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
@@ -389,6 +547,44 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except Exception as e:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
+        user_id = query.from_user.id
+        # User Verifying
+        is_second_shortener = await db.use_second_shortener(user_id)
+        if not await db.is_user_verified(user_id) or is_second_shortener:
+            verify_id = "".join(
+                random.choices(string.ascii_uppercase + string.digits, k=7)
+            )
+            how_to_download_link = (
+                TUTORIAL_LINK_2 if is_second_shortener else TUTORIAL_LINK_1
+            )
+            await db.create_verify_id(user_id, verify_id)
+
+            buttons = [
+                [
+                    InlineKeyboardButton(
+                        text="🔹 Click hare to Verify 🔹",
+                        url=await get_shortlink(
+                            f"https://telegram.me/{temp.U_NAME}?start=notcopy_{user_id}_{verify_id}",
+                            is_second_shortener,
+                        ),
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        text="🌀 How to verify 🌀", url=how_to_download_link
+                    )
+                ],
+            ]
+            num = 2 if is_second_shortener else 1
+            text = f"You'r not verified today. Please verify - ({num}) now and get unlimited access for 1 day)"
+            if query.message.chat.type == "private":
+                return await query.message.reply_text(
+                    text, reply_markup=InlineKeyboardMarkup(buttons)
+                )
+
+        # User Verifying
+
+
         if AUTH_CHANNEL and not await is_subscribed(client, query):
             await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒...\n\n 😳 bro niche diye gye updates channel ko join karo  jab tak aap updates channel join nahi karte tab tak bot apko movie nahi dega! ", show_alert=True)
             return
@@ -712,6 +908,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "inst":
+        await query.answer(INST, show_alert=True)
+        return
     elif query.data == "ss_alert":
         await query.answer(SS_ALERT.format(query.from_user.first_name),show_alert=True)
         return
@@ -959,7 +1158,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
+    elif query.data.startswith("rq#"):
+        _, status, message_id, user_query = query.data.split("#", maxsplit=3)
+        dict_info = {"alupd":"Already uploaded ✅", "nry":"Not released yet", "ntaik":"Not available in kannada", "ntaih":"Not available in Hindi", "ntdih":"Not Dubb in Hindi", "cysp":"Go to Google and check your spelling  <b><a href=https://www.google.com>𝐆𝐨𝐨𝐠𝐥𝐞</a></b>", "simd":"Send imdb link", "au":"Already uploaded ✅ \n\n Go to Google and check your spelling  <b><a href=https://www.google.com>𝐆𝐨𝐨𝐠𝐥𝐞</a></b>", "up":"Updated  ✅", "nr":"Not released OTT yet", "na":"Not available"}
+
+        user_message = await client.get_messages(REQ_GRP, int(message_id))
+        user_id = user_message.from_user.id
+        user_mention = (await client.get_users(user_message.from_user.id)).mention
+
+        text = f"Hey {user_mention}... \n\nYour movie 👉 {dict_info[status]}"
+        await client.send_message(REQ_GRP, text, reply_to_message_id=int(message_id))
+        bbb = await query.edit_message_text("Request has been updated")
+        await asyncio.sleep(20)
+        await bbb.delete()       
+
     await query.answer('Piracy Is Crime')
+
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -970,7 +1184,7 @@ async def auto_filter(client, msg, spoll=False):
         if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
             return
         if 2 < len(message.text) < 100:
-            search = message.text
+            search = await replace_words(message.text)
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
                 if settings["spell_check"]:
@@ -988,7 +1202,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"⚡️{get_size(file.file_size)}» {file.file_name}", url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -998,11 +1212,11 @@ async def auto_filter(client, msg, spoll=False):
             [
                 InlineKeyboardButton(
                     text=f"{file.file_name}",
-                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
+                    callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"⚡️{get_size(file.file_size)}»",
-                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
+                    text=f"{get_size(file.file_size)}",
+                    callback_data=f'{pre}_#{file.file_id}',
                 ),
             ]
             for file in files
@@ -1065,7 +1279,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🖥 Movie Name : {search}\n📡Group : {message.chat.title}\n🤦Requested By : {message.from_user.mention}</b>"
+        cap = f"<b>🖥 Movie Name : {search}\n📡Group : {message.chat.title}\nRequested By : {message.from_user.mention}</b>"
     if imdb and imdb.get('poster'):
         try:
           ab = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))

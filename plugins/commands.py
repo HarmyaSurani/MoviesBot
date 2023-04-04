@@ -1,18 +1,20 @@
+from datetime import datetime
+import string
 import os
 import logging
 import random
 import asyncio
-
+import pytz
 from plugins import malik
 from plugins.malik2.buttons import GSLB
-from Script import script, ADDG
+from Script import script, ADDG, MALIK2, SECOND_VERIFICATION_TEXT, SECOND_VERIFY_COMPLETE_TEXT, MALIK7
 from pyrogram import Client, filters, enums 
 from pyrogram.errors import ChatAdminRequired, FloodWait
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_del_files
 from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, PHTT, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT
-from utils import get_settings, get_size, is_subscribed, save_group_settings, temp
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, PHTT, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, REQ_GRP, MALIK, MALIK5, TUTORIAL_LINK_1, TUTORIAL_LINK_2
+from utils import get_settings, get_size, is_subscribed, save_group_settings, temp, get_shortlink
 from database.connections_mdb import active_connection
 import re
 import json
@@ -24,7 +26,40 @@ quote = {}
 
 
 @Client.on_message(filters.command("start") & filters.incoming)
-async def start(client, message):
+async def start(client:Client, message):
+    
+    m = message
+    user_id = m.from_user.id
+
+    if len(m.command) == 2 and m.command[1].startswith('notcopy'):
+        user_id = int(m.command[1].split("_")[1])
+        verify_id = m.command[1].split("_")[2]
+
+        verify_id_info = await db.get_verify_id_info(user_id, verify_id)
+        if not verify_id_info or verify_id_info["verified"]:
+            await message.reply("Invalid link. Link has already verified or has wrong hash. Try Again")
+            return
+
+        ist_timezone = pytz.timezone('Asia/Kolkata')
+        
+        key = "second_time_verified" if await db.is_user_verified(user_id) else "last_verified"
+        
+        await db.update_notcopy_user(user_id, {key:datetime.now(tz=ist_timezone)})
+        await db.update_verify_id_info(user_id, verify_id, {"verified":True})
+
+        text = f"""User ID : `{user_id}`
+Username : {m.from_user.mention}
+Time : {datetime.now(tz=ist_timezone).strftime('%Y-%m-%d %H:%M:%S')}
+
+#New_Verified_User_complete"""
+        txt = SECOND_VERIFY_COMPLETE_TEXT if key == "second_time_verified" else MALIK7
+        await client.send_message(LOG_CHANNEL, text)
+        dmm = await m.reply_photo(
+        photo=(MALIK5), 
+        caption=(txt.format(message.from_user.mention)), 
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚶 Back to Group 🚶",url="https://t.me/+GA9ku5KyDGFiMzVl"),]]),parse_mode=enums.ParseMode.HTML)#"You are now verified for next 24 hours. Continue asking movies")
+        return
+
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         reply_markup = malik.hstnn
         await message.reply_text(
@@ -88,6 +123,40 @@ async def start(client, message):
     except:
         file_id = data
         pre = ""
+    # User Verifying
+    user_id = m.from_user.id
+
+    user_verified = await db.is_user_verified(user_id)
+    is_second_shortener = await db.use_second_shortener(user_id)
+
+    how_to_download_link = TUTORIAL_LINK_2 if is_second_shortener else TUTORIAL_LINK_1
+    
+    if not user_verified or is_second_shortener:
+        verify_id = ''.join(random.choices(string.ascii_uppercase + string.digits, k=7))
+        await db.create_verify_id(user_id, verify_id)
+        buttons = [[InlineKeyboardButton(text="🔹 Click hare to Verify 🔹", url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=notcopy_{user_id}_{verify_id}", is_second_shortener),),], [InlineKeyboardButton(text="🌀 How to verify 🌀", url=how_to_download_link)]]
+        reply_markup=InlineKeyboardMarkup(buttons)
+        num = 2 if is_second_shortener else 1
+
+        text = f"""User ID : `{user_id}`
+Username : {m.from_user.mention}
+Time : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+#New_Verify_{num}_User"""
+        await client.send_message(LOG_CHANNEL, text)
+        bin_text = SECOND_VERIFICATION_TEXT if is_second_shortener else MALIK2
+        dmb = await m.reply_text(
+            #photo=(MALIK), #caption=(MALIK2)),
+            text=(bin_text.format(message.from_user.mention)),
+            protect_content = True,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        await asyncio.sleep(120) 
+        await dmb.delete()
+        return
+
+
     if data.split("-", 1)[0] == "BATCH":
         sts = await message.reply("Please wait")
         file_id = data.split("-", 1)[1]
@@ -539,3 +608,55 @@ async def save_template(client, message):
     template = message.text.split(" ", 1)[1]
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"Successfully changed template for {title} to\n\n{template}")
+
+
+@Client.on_message(filters.command('pm') & filters.channel)
+async def message_cmd_handler(client: Client, m: Message):
+    try:
+        if len(m.command) < 4:
+            wrong_input_txt = "Use this format to send message: `/pm user_id msg_id message`"
+            return await m.reply(wrong_input_txt)
+
+        user_id = int(m.command[1])
+        reply_msg_id = int(m.command[2])
+
+        try:
+            user_mention = (await client.get_users(user_id)).mention
+        except Exception as e:
+            await m.reply("Some error occurred while fetching user information. Maybe user didn't start the bot yet")
+            return 
+            
+        text = f'Dear {user_mention}, You have a message from admin\n\n{m.text.replace(f"/pm {user_id} {reply_msg_id} ", "")}'
+        await client.send_message(REQ_GRP, text, reply_to_message_id=reply_msg_id)
+    except Exception as e:
+        print(e)
+
+
+@Client.on_message(filters.command("del_files") & filters.private & filters.user(ADMINS))
+async def del_files(bot, message): 
+    msg = message
+    chats = msg.chat.type
+    if chats != enums.ChatType.PRIVATE:
+        return await msg.reply_text(f"<b>Hey {msg.from_user.mention}, This command only works on my PM !</b>")
+    else:
+        pass
+    try:
+        keyword = msg.text.split(" ", 1)[1]
+    except:
+        return await msg.reply_text(f"<b>Hey {msg.from_user.mention}, Give me a keyword along with the command to delete files.</b>")
+    k = await bot.send_message(chat_id=msg.chat.id, text=f"<b>Fetching Files for your query {keyword} on my DB... Please wait...</b>")
+    files, next_offset, total = await get_del_files(keyword)
+    await k.edit_text(f"<b>Found {total} files for your query {keyword} !</b>")
+    deleted = 0
+    for file in files:
+        file_ids = file.file_id
+        file_name = file.file_name
+        result = await Media.collection.delete_one({
+            '_id': file_ids,
+        })
+        if result.deleted_count:
+            logger.info(f'File Found for your query {keyword}! Successfully deleted {file_name} from database.')
+        deleted += 1
+    deleted = str(deleted)
+    await k.edit_text(text=f"<b>Successfully deleted {deleted} files from database for your query {keyword}.</b>")
+

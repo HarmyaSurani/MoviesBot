@@ -621,6 +621,16 @@ MQTT = """<b>⚠️ 𝐇𝐞𝐲, {}!..</b>
 <b>𝐢𝐬 𝐍𝐨 𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐭𝐨 𝐭𝐡𝐞 𝐆𝐢𝐯𝐞𝐧 𝐖𝐨𝐫𝐝 𝐖𝐚𝐬 𝐅𝐨𝐮𝐧𝐝 🥺
 𝐏𝐥𝐞𝐚𝐬𝐞 𝐆𝐨 𝐭𝐨 𝐆𝐨𝐨𝐠𝐥𝐞 𝐚𝐧𝐝 𝐂𝐨𝐧𝐟𝐢𝐫𝐦 𝐭𝐡𝐞 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 🥺</b> <b><a href=https://www.google.com>𝐆𝐨𝐨𝐠𝐥𝐞</a></b>"""
 
+MQTTTM = """<b>⚠️ 𝐇𝐞𝐲, {}!..</b> 
+
+<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ
+
+ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ
+
+ʀᴇᴀᴅ ɪɴsᴛʀᴜᴄᴛɪᴏɴs ꜰᴏʀ ʙᴇᴛᴛᴇʀ ʀᴇsᴜʟᴛs ☟</b>"""
+
+
+
 
 WCM = """<b>𝗛𝗲𝘆 {} .!   
 
@@ -846,6 +856,21 @@ WALL = """malik"""
 
 SHARETXT = """malik"""
 
+INST = """ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ғᴏʀᴍᴀᴛ 
+
+ᴇxᴀᴍᴘʟᴇ : ᴀᴠᴇɴɢᴇʀs ᴏʀ ᴀᴠᴇɴɢᴇʀs 𝟸𝟶𝟷𝟸: 
+
+sᴇʀɪᴇs ʀᴇǫᴜᴇsᴛ ғᴏʀᴍᴀᴛ: 
+
+ᴇxᴀᴍᴘʟᴇ : ʟᴏᴋɪ s01ᴇ01 ᴏʀ ʟᴏᴋɪ s01ᴇ10,  
+
+ᴅᴏɴ'ᴛ ᴜsᴇ ' : ( ! , . / ) 
+
+ᴘᴏᴡᴇʀᴇᴅ ʙʏ : - ᴍᴏᴠɪᴇs 🏠"""
+
+
+
+
 
 MALIKK = """<b>ʜᴇʏ {}.👋\n\n⚠️Oops !! ʏᴏᴜʀ ʀᴏɴɢ\n\nᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ\n\nғʀɪsᴛ ✍ ᴛɪᴘᴇ ʏᴏᴜʀ ᴛᴇxᴛ ᴀɴᴅ ʀᴇᴘʟʏ /tr hi
 ʜɪ = ʜɪɴᴅɪ 
@@ -868,6 +893,6 @@ PPI = environ.get("PPI", "https://telegra.ph/file/2315c0c4b48223f32b020.jpg")
 
 IYGL = environ.get("IYGL", "https://youtu.be/KQSplGRD5gQ")
 
-REQUEST_ADMIN = environ.get("REQUEST_ADMIN", "https://t.me/Filmyfunda_help_bot")
+REQUEST_ADMIN = environ.get("REQUEST_ADMIN", "https://t.me/+jk7skw3kIU45MGE1")
 YTILK = environ.get("YTILK", "https://youtube.com/channel/UCPaHDqWf3D3w2nxb8p3sr4A")
 
