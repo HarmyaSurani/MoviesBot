@@ -310,7 +310,7 @@ ADDG = """ʜᴇʏ..
 
 ⚠️ ᴍᴏʀᴇ ʜᴇʟᴘ ᴄʜᴇᴄᴋ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ..
 
-©ᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ: filmyfunda movies"""
+©ᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ: FilmyBag Network"""
 
 M_NNT_FND = """malik"""
 
