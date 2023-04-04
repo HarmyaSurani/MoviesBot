@@ -127,12 +127,15 @@ I Am A⚡️ POWERFUL AUTOFILTER BOT...
 
 <b>━━━━━━━━━᚜ Payment Methods ᚛━━━━━━━━━
 
-✮ 𝗚𝗼𝗼𝗴𝗹𝗲𝗣𝗮𝘆
-✮ 𝗣𝗮𝘆𝘁𝗺           
-✮ 𝗣𝗵𝗼𝗻𝗲𝗣𝗲     
-✮ 𝗣𝗮𝘆𝗣𝗮𝗹
+✮ UPI
+✮ Paytm           
+✮ PhonePe     
+✮ PayPal
+✮ Airtm
+✮ Skrill
+✮ Payeer
 
-_𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛𝐨𝐮𝐭 𝐓𝐡𝐞 𝐏𝐚𝐲𝐦𝐞𝐧𝐭 𝐈𝐧𝐟𝐨_
+_Contact Me To Know About The Payment Info_
 ━━━━━━━━━━━━᚜ <a href=https://t.me/harmya><b>Harmya Surani</b></a> ᚛━━━━━━━━━━━━"""
     DINETTE_TXT =  """<b>Donation</b>
 
@@ -144,76 +147,78 @@ _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛�
 
 <b>━━━━━━━━━᚜ Payment Methods ᚛━━━━━━━━━
 
+✮ UPI
 ✮ Paytm           
 ✮ PhonePe     
-✮ 𝗣𝗮𝘆𝗣𝗮𝗹
-✮
+✮ PayPal
+✮ Airtm
+✮ Skrill
+✮ Payeer
 
 _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛𝐨𝐮𝐭 𝐓𝐡𝐞 𝐏𝐚𝐲𝐦𝐞𝐧𝐭 𝐈𝐧𝐟𝐨_
 ━━━━━━━━━━━━᚜ <a href=https://t.me/harmya><b>Harmya Surani</b></a> ᚛━━━━━━━━━━━━"""
-    VIDEO_TXT ="""<b>𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚅𝙸𝙳𝙴𝙾 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚃𝚄𝙱𝙴.
+    VIDEO_TXT ="""<b>𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 ANY 𝚅𝙸𝙳𝙴𝙾 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚃𝚄𝙱𝙴.
 
-• 𝘜𝘴𝘢𝘨𝘦
-𝘠𝘰𝘶 𝘊𝘢𝘯 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘈𝘯𝘺 𝘝𝘪𝘥𝘦𝘰 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘵𝘶𝘣𝘦
+⭕ 𝘜𝘴𝘢𝘨𝘦 :
+- 𝘠𝘰𝘶 𝘊𝘢𝘯 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘈𝘯𝘺 𝘝𝘪𝘥𝘦𝘰 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘵𝘶𝘣𝘦
 
-𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚
-• 𝘛𝘺𝘱𝘦 /video or /mp4 𝘈𝘯𝘥 (𝘝𝘪𝘥𝘦𝘰 Link)
-• 𝘌𝘹𝘢𝘮𝘱𝘭𝘦:
-/𝘮𝘱4 https://youtu.be/Your Link<\b>"""
+⭕ 𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚 :
+- 𝘛𝘺𝘱𝘦 /video or /mp4 𝘈𝘯𝘥 (𝘝𝘪𝘥𝘦𝘰 Link)
+- 𝘌𝘹𝘢𝘮𝘱𝘭𝘦 : /𝘮𝘱4 https://youtu.be/Your Link<\b>"""
 
-    VIDEOS_TXT ="""<b>𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚅𝙸𝙳𝙴𝙾 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚃𝚄𝙱𝙴.
+    VIDEOS_TXT ="""<b>𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 MULTIPLE 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 VIDEOS
 
-• 𝘜𝘴𝘢𝘨𝘦
-𝘠𝘰𝘶 𝘊𝘢𝘯 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘈𝘯𝘺 𝘝𝘪𝘥𝘦𝘰 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘵𝘶𝘣𝘦
+⭕ 𝘜𝘴𝘢𝘨𝘦 :
+- 𝘠𝘰𝘶 𝘊𝘢𝘯 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 Multiple 𝘝𝘪𝘥𝘦𝘰es 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘵𝘶𝘣𝘦
 
-𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚
-• 𝘛𝘺𝘱𝘦 /video or /mp4 𝘈𝘯𝘥 (𝘝𝘪𝘥𝘦𝘰 Link)
-• 𝘌𝘹𝘢𝘮𝘱𝘭𝘦:
-/𝘮𝘱4 https://youtu.be/Your Link<\b>"""
+⭕ 𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚 :
+- 𝘛𝘺𝘱𝘦 /video or /mp4 𝘈𝘯𝘥 (𝘝𝘪𝘥𝘦𝘰 Links)
+- 𝘌𝘹𝘢𝘮𝘱𝘭e : /𝘮𝘱4 https://youtu.be/Your1 https://youtu.be/Your2
+- 𝘌𝘹𝘢𝘮𝘱𝘭e : /video https://youtu.be/Your1 https://youtu.be/Your2<\b>"""
 
-    YTTHUMB_TXT = """<b>𝙷𝙴𝙻𝙿𝚂 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙰𝙽𝚈 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝚅𝙸𝙳𝙴𝙾 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻
+    YTTHUMB_TXT = """<b>𝙷𝙴𝙻𝙿 YOU 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙰𝙽𝚈 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝚅𝙸𝙳𝙴𝙾 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻
     
-⭕𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚
-𝘛𝘺𝘱𝘦 /ytthumb 𝘈𝘯𝘥 𝘝𝘪𝘥𝘦𝘰 𝘓𝘪𝘯𝘬
+⭕ 𝘜𝘴𝘢𝘨𝘦 :
+- 𝘠𝘰𝘶 𝘊𝘢𝘯 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘈𝘯𝘺 𝘠𝘰𝘶𝘵𝘶𝘣𝘦 Video Thumbnail
 
-• 𝘌𝘹𝘢𝘮𝘱𝘭𝘦
-/ytthumb https://youtu.be/yourlink</b>"""
+⭕ 𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚 :
+- 𝘛𝘺𝘱𝘦 /ytthumb 𝘈𝘯𝘥 𝘝𝘪𝘥𝘦𝘰 𝘓𝘪𝘯𝘬
 
-    FORCESUB_TXT = """⚠️ Join our updated channel below.  bot will not give you movie until you join from our update channel...
+• 𝘌𝘹𝘢𝘮𝘱𝘭𝘦 : /ytthumb https://youtu.be/yourlink</b>"""
+
+    FORCESUB_TXT = """⚠️ Join Our Updated Channel Below.  Bot Will Not Give You Movie Until You Join From Our Update Channel....
     
 ⚠️ ಕೆಳಗಿನ ನಮ್ಮ  ಚಾನಲ್‌ಗೆ ಸೇರಿ. ನಮ್ಮ ಅಪ್‌ಡೇಟ್ ಚಾನೆಲ್‌ಗೆ ನೀವು ಸೇರುವವರೆಗೆ ಬೋಟ್ ನಿಮಗೆ ಚಲನಚಿತ್ರವನ್ನು ನೀಡುವುದಿಲ್ಲ
-ಆದ್ದರಿಂದ ಮೊದಲು ಈ ಚಾನೆಲ್ ಅನ್ನು ಸೇರಿ...
+ಆದ್ದರಿಂದ ಮೊದಲು ಈ ಚಾನೆಲ್ ಅನ್ನು ಸೇರಿ....
 
-⚠️ கீழே உள்ள எங்கள் புதுப்பிக்கப்பட்ட சேனலில் சேரவும்.  எங்கள் புதுப்பிப்பு சேனலில் நீங்கள் சேரும் வரை போட் உங்களுக்கு திரைப்படத்தை வழங்காது... 
+⚠️ கீழே உள்ள எங்கள் புதுப்பிக்கப்பட்ட சேனலில் சேரவும்.  எங்கள் புதுப்பிப்பு சேனலில் நீங்கள் சேரும் வரை போட் உங்களுக்கு திரைப்படத்தை வழங்காது.... 
 
 ⚠️ ചുവടെയുള്ള ഞങ്ങളുടെ അപ്‌ഡേറ്റ് ചെയ്‌ത ചാനലിൽ ചേരുക.  ഞങ്ങളുടെ അപ്‌ഡേറ്റ് ചാനലിൽ നിന്ന് നിങ്ങൾ ചേരുന്നത് വരെ ബോട്ട് നിങ്ങൾക്ക് സിനിമ നൽകില്ല....
 
-⚠️ हमारे निचे दिए गये update चैनल को join करे जब तक आप हमारे update चैनल को join नहीं करेंगे तब तक bot आपको मूवी नहीं देगा..."""
+⚠️ हमारे निचे दिए गये Update चैनल को Join करे जब तक आप हमारे Update चैनल को Join नहीं करेंगे तब तक Bot आपको मूवी नहीं देगा...."""
 
-    URLSHORT_TXT = """<b>➤ 𝐇𝐞𝐥𝐩: 𝖴𝗋𝗅 𝗌𝗁𝗈𝗋𝗍𝗇𝖾𝗋
+    URLSHORT_TXT = """<b>➤ 𝐇𝐞𝐥𝐩 : 𝖴𝗋𝗅 S𝗁𝗈𝗋𝗍e𝗇𝖾𝗋
 
-𝚃𝚑𝚒𝚜 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 𝚑𝚎𝚕𝚙𝚜 𝚢𝚘𝚞 𝚝𝚘 𝚜𝚑𝚘𝚛𝚝 𝚊 𝚞𝚛𝚕 
+⭕  Usage :
+- 𝚃𝚑𝚒𝚜 C𝚘𝚖𝚖𝚊𝚗𝚍 H𝚎𝚕𝚙𝚜 Y𝚘𝚞 T𝚘 Sh𝚘𝚛𝚝 A U𝚛𝚕 
 
-➤ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐚𝐧𝐝 𝐔𝐬𝐚𝐠𝐞:
+⭕ 𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚 :
+- U𝗌𝖾 /short C𝗈𝗆𝗆𝖺𝗇𝖽 W𝗂𝗍𝗁 Y𝗈𝗎𝗋 L𝗂𝗇𝗄 T𝗈 G𝖾𝗍 S𝗁𝗈𝗋𝗍𝖾𝖽 L𝗂𝗇𝗄𝗌 With Your Link Shortener
 
-➪ /short: 𝗎𝗌𝖾 𝗍𝗁𝗂𝗌 𝖼𝗈𝗆𝗆𝖺𝗇𝖽 𝗐𝗂𝗍𝗁 𝗒𝗈𝗎𝗋 𝗅𝗂𝗇𝗄 𝗍𝗈 𝗀𝖾𝗍 𝗌𝗁𝗈𝗋𝗍𝖾𝖽 𝗅𝗂𝗇𝗄𝗌
-
-➛𝖤𝗑𝖺𝗆𝗉𝗅𝖾:
-/short https://t.me/+veUIdIW2CQ5GU5</b>"""
+• 𝖤𝗑𝖺𝗆𝗉𝗅𝖾 : /short https://google.com</b>"""
 
 
-    URLSHORTN_TXT = """<b>➤ 𝐇𝐞𝐥𝐩: 𝖴𝗋𝗅 𝗌𝗁𝗈𝗋𝗍𝗇𝖾𝗋
+    URLSHORTN_TXT = """<b>➤ 𝐇𝐞𝐥𝐩 : 𝖴𝗋𝗅 S𝗁𝗈𝗋𝗍e𝗇𝖾𝗋
 
-𝚃𝚑𝚒𝚜 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 𝚑𝚎𝚕𝚙𝚜 𝚢𝚘𝚞 𝚝𝚘 𝚜𝚑𝚘𝚛𝚝 𝚊 𝚞𝚛𝚕 
+⭕  Usage :
+- 𝚃𝚑𝚒𝚜 C𝚘𝚖𝚖𝚊𝚗𝚍 H𝚎𝚕𝚙𝚜 Y𝚘𝚞 T𝚘 S𝚑𝚘𝚛𝚝 A U𝚛𝚕 
 
-➤ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐚𝐧𝐝 𝐔𝐬𝐚𝐠𝐞:
+⭕ 𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚 :
+- U𝗌𝖾 /short C𝗈𝗆𝗆𝖺𝗇𝖽 W𝗂𝗍𝗁 Y𝗈𝗎𝗋 L𝗂𝗇𝗄 T𝗈 G𝖾𝗍 S𝗁𝗈𝗋𝗍𝖾𝖽 L𝗂𝗇𝗄𝗌 With Your Link Shortener
 
-➪ /short: 𝗎𝗌𝖾 𝗍𝗁𝗂𝗌 𝖼𝗈𝗆𝗆𝖺𝗇𝖽 𝗐𝗂𝗍𝗁 𝗒𝗈𝗎𝗋 𝗅𝗂𝗇𝗄 𝗍𝗈 𝗀𝖾𝗍 𝗌𝗁𝗈𝗋𝗍𝖾𝖽 𝗅𝗂𝗇𝗄𝗌
+• 𝖤𝗑𝖺𝗆𝗉𝗅𝖾 : /short https://google.com</b>"""
 
-➛𝖤𝗑𝖺𝗆𝗉𝗅𝖾:
-/short https://t.me/+veUIdIW25mOGU5</b>"""
-
-    GHHM_TXT = """<b>7k User 💖 Thanks For Your Support...
+    GHHM_TXT = """<b>💖 Thanks For Your Support...
 
 𝖩𝗎𝗌𝗍 𝖠𝖽𝖽 𝖮𝗎𝗋 𝖡𝗈𝗍 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 𝖠𝗌 𝖠𝖽𝗆𝗂𝗇, 𝖨𝗍 𝖶𝗂𝗅𝗅 𝖯𝗋𝗈𝗏𝗂𝖽𝖾 𝖬𝗈𝗏𝗂𝖾𝗌 𝖳𝗁𝖾𝗋𝖾... 😎
 
@@ -225,65 +230,63 @@ _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛�
 ✪ IMDb Real Details
 ✪ Two Buttons Mode
 ✪ Force Subscribe
-✪ Extra Features: download songs, download you tube video, URL Shortner,  
+✪ Extra Features: Download Youtube Video Thumbnail, Download YouTube Videoes, URL Shortener  
 
 ⚙ More Features Adding Soon</b> 😎"""
 
-    GHHN_TXT = """Extra features"""
+    GHHN_TXT = """Extra Features"""
 
     OWNER_TXT = """<b>>━━━━᚜ Owner Details ᚛━━━━<
     
 ⭕️ FULL NAME : Harmya Surani
 ⭕️ USERNAME: @harmya
-⭕️PERMANENT DM LINK : <a href=https://t.me/harmya>CLICK Here</a></b>"""
+⭕️ PERMANENT DM LINK : <a href=https://t.me/harmya>Click Here</a></b>"""
 
-    SPELLING_TEXT = """<u><b> jack sparrow </b></u>"""
+    SPELLING_TEXT = """<u><b> Harmya Surani </b></u>"""
 
 
-    GROUP_R_TXT = """<b>GROUP RULES
+    GROUP_R_TXT = """<b>⭕️ GROUP RULES :
 
 ☀️  Search With Correct Spelling..
 
-☀️ Try to Search movie With  Year If The bot is Not Sending You Accurate Result..
+☀️ Try To Search Movie With Year If The Bot Is Not Sending You Accurate Result....
 
-☀️ Search Series In The Given From Example : Gotham S03E01 And S03E10..
+☀️ Search Series In The Given From Example : Gotham S03E01 And S03E10..D..
 
-☀️ Search Movies  in The Given From Example:    
+☀️ Search Movies  in The Given From Example :    
 (1) Avengers.. ✅
-(2) Avengers Hindi. ✅
-(3) Don't Tipe Avengers Hindi Dubbed..❌
+(2) Avengers Hindi.. ✅
+(3) Don't Type Avengers Hindi Dubbed.. ❌
 
-☀️Don't Do Any Self Promotion.
+☀️ Don't Do Any Self Promotion.
 
 ☀️ Don't Send Any Kind Of Photo Video Documents URL ETC.
 
 ☀️ Sending The Above  Mantained Things Will Lead To Permanent Ban.
 
-☀️Don't Request Any Things Other Than Movie Series Animes.
+☀️ Don't Request Any Things Other Than Movie Series Animes.
 
-☀️ Give and Take Respect</b>.."""
+☀️ Give And Take Respect</b>"""
 
 MALIK_PHH = """<b>Hay 👋 {}.... 🌷 ❤️
 
-😎 welcome to Our Group...
+😎 Welcome To FilmyBag Group...
   
         😎 👉 <s>{}</s> 👈 😎
 
-😎 You Can Find 🔍 Movies / Series / Animes etc. From Here. Enjoy 😉...
+😎 You Can Find 🔍 Movies / Series / Animes Etc. From Here. Enjoy 😉...
 
-🙏 Plz do You not request the owner for the movie.. or else you will be blocked directly...⚠️
+⚙ If There Is Any Problem With The Bot Then Contact The Owner..
 
-⚙ If there is any problem with the bot then contact the owner..
+👉 If You Have Any Question Then Contact Us Below  👇</b>"""
 
-If you have any question then contact us below  👇</b>"""
-
-ALURT_FND = """<b>Your 👉 {}❗️ spelling is not correct, please choose from the list given 👇
+ALURT_FND = """<b>Your 👉 {}❗️ Spelling Is Not Correct, Please Choose From The List Given 👇
  ┏━━━━•❅•°•❈•°•❅━━━━┓
- ✰ CHECK YOUR MOVIE ON THE GIVEN LIST AND SELECT YOUR MOVIE..
+ ✰ CHECK YOUR MOVIE ON THE GIVEN LIST AND SELECT YOUR MOVIE...
  
- ✰ ನೀಡಿರುವ ಪಟ್ಟಿಯಲ್ಲಿ ನಿಮ್ಮ ಚಲನಚಿತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಚಲನಚಿತ್ರವನ್ನು ಆಯ್ಕೆಮಾಡಿ
+ ✰ ನೀಡಿರುವ ಪಟ್ಟಿಯಲ್ಲಿ ನಿಮ್ಮ ಚಲನಚಿತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಚಲನಚಿತ್ರವನ್ನು ಆಯ್ಕೆಮಾಡಿ...
 
- ✰ दी गई सूची में अपनी फिल्म देखें और अपनी फिल्म चुनें</b> 👇👇👇                                             ✰
+ ✰ दी गई सूची में अपनी फिल्म देखें और अपनी फिल्म चुनें...</b> 👇👇👇                                             ✰
  ┗━━━━•❅•°•❈•°•❅•━ ━━┛
 """
 
@@ -296,11 +299,11 @@ MNTFN = """<b>⭕️ THIS MOVIE IS NOT AVAILABLE IN MY DATABASE. REQUEST TO ADMI
 ⭕️ REQUEST TO ADMIN HERE 👇</b>"""
 
 
-ADG = """<b>Hay. {}..\n\nThankyou For Adding Me In.. ❣️
+ADG = """<b>Hay. {}..\n\nThank You For Adding Me In.. ❣️
 
              👉 <s>{}</s> 👈 
 
-If you have any questions & doubts about using me..\n\n Contact my Owner >> <a href=https://t.me/{}>Owner</a> </b>"""
+👉 If You Have Any Questions & Doubts About Using Me..\n Contact My Owner >> <a href=https://t.me/{}>Harmya Surani</a> </b>"""
 
 ADDG = """ʜᴇʏ..
 
