@@ -113,13 +113,13 @@ SHORTENER_API2 = environ.get("SHORTENER_API2", "")
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "")
 
 SHORT_URL = is_enabled((environ.get('SHORT_URL', "True")), True)
-TUTORIAL_LINK = environ.get("TUTORIAL_LINK", "https://t.me/filmyfunda_movies/72")
+TUTORIAL_LINK = environ.get("TUTORIAL_LINK", "https://youtube.com/shorts/XlFnLtVou7c")
 
 MALIK = environ.get("malik", "https://i.postimg.cc/2j98FFYc/MALIK.png")
 MALIK5 = environ.get("malik5", "https://i.postimg.cc/gj7zzd4F/MALIKS.png")
 
-TUTORIAL_LINK_2 = os.environ.get('TUTORIAL_LINK_2', 'https://t.me/filmyfunda_movies/73')
-TUTORIAL_LINK_1 = os.environ.get('TUTORIAL_LINK_1', 'https://t.me/filmyfunda_movies/72')
+TUTORIAL_LINK_2 = os.environ.get('TUTORIAL_LINK_2', 'https://youtube.com/shorts/XlFnLtVou7c')
+TUTORIAL_LINK_1 = os.environ.get('TUTORIAL_LINK_1', 'https://youtube.com/shorts/XlFnLtVou7c')
 
 BLACKLIST_WORDS=["none"]
 
