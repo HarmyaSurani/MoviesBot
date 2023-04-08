@@ -86,7 +86,7 @@ async def get_ststs(bot, message):
 async def owner(client, message):
     if len(message.command):
         buttons = [[
-            InlineKeyboardButton('💢 close 💢', callback_data='close_data')
+            InlineKeyboardButton('💢 Close 💢', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -103,7 +103,7 @@ async def owner(client, message):
 async def rules(client, message):
     if len(message.command):
         buttons = [[
-            InlineKeyboardButton('💢 close 💢', callback_data='close_data')
+            InlineKeyboardButton('💢 Close 💢', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -120,7 +120,7 @@ from pyrogram.types import Message
 
 
 def extract_user(message: Message) -> (int, str):
-    """extracts the user from a message"""
+    """Extracts The User From A Message"""
     user_id = None
     user_first_name = None
 
@@ -472,7 +472,7 @@ def instatus(client, message):
 async def telegraph(client, message):
     replied = message.reply_to_message
     if not replied:
-        await message.reply("Reply to a supported media file")
+        await message.reply("Reply To A Supported Media File")
         return
     if not (
         (replied.photo and replied.photo.file_size <= 5242880)
@@ -495,7 +495,7 @@ async def telegraph(client, message):
         caption=(MMALL.format(message.from_user.mention)),
         reply_markup=InlineKeyboardMarkup(
                       [[
-                        InlineKeyboardButton('Try again ', callback_data="close_data")
+                        InlineKeyboardButton('Try Again ', callback_data="close_data")
                       ]]
         ),
         parse_mode=enums.ParseMode.HTML
@@ -508,7 +508,7 @@ async def telegraph(client, message):
         file_name="root/downloads/",
     )
     mkn=await message.reply_text(
-        text="<code>Trying to processing please weit.....</code>",
+        text="<code>Trying To Process Please Wait....</code>",
         disable_web_page_preview=True
     )
     await asyncio.sleep(1)
@@ -557,10 +557,10 @@ async def stickerid(bot, message):
 
 SS_ALERT = """
 
-🔹ᴍʏ ɴᴀᴍᴇ Thunder Bᴏᴛ
-🔹I ᴀᴍ Aᴜᴛᴏ Fɪʟᴛᴇʀ Bᴏᴛ.😎
-🔹Jᴜsᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀs ᴀᴅᴍɪɴ
-🔹ɪᴛ ᴡɪʟ ᴘʀᴏᴠɪᴅᴇ ᴀʟʟ ᴍᴏᴠɪᴇs ʏᴏᴜʀ  ɢʀᴏᴜᴘ.😎
+🔹 My Name Is FilmyBag Bot
+🔹 I Am A Powerful Aotu Filter Bot
+🔹 Just Add Me To Your Group
+🔹 It Will Provide ᴀʟʟ ᴍᴏᴠɪᴇs ʏᴏᴜʀ  ɢʀᴏᴜᴘ.😎
 
 🔹ᴍᴏʀᴇ ᴅᴇᴛᴀɪʟs ᴛʏᴘᴇ  👉 /ʙᴏᴛɪɴғᴏ 
 🔹Oᴠɴᴇʀ ᴅᴇᴛᴀɪʟs ᴛɪᴘᴇ  👉  /ᴏᴡɴᴇʀ"""

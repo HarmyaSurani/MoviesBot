@@ -113,13 +113,13 @@ SHORTENER_API2 = environ.get("SHORTENER_API2", "694f8bd1b01b9f2a81b53a13a8b83e87
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "tnvalue.in")
 
 SHORT_URL = is_enabled((environ.get('SHORT_URL', "True")), True)
-TUTORIAL_LINK = environ.get("TUTORIAL_LINK", "https://t.me/filmyfunda_movies/72")
+TUTORIAL_LINK = environ.get("TUTORIAL_LINK", "https://youtu.be/Jl045VfNk28")
 
 MALIK = environ.get("malik", "https://telegra.ph/file/a35a995c9c411048adfab.jpg")
 MALIK5 = environ.get("malik5", "https://telegra.ph/file/a00c405a374d21ea7cfb7.jpg")
 
-TUTORIAL_LINK_2 = os.environ.get('TUTORIAL_LINK_2', 'https://t.me/filmyfunda_movies/73')
-TUTORIAL_LINK_1 = os.environ.get('TUTORIAL_LINK_1', 'https://t.me/filmyfunda_movies/72')
+TUTORIAL_LINK_2 = os.environ.get('TUTORIAL_LINK_2', 'https://youtu.be/Jl045VfNk28')
+TUTORIAL_LINK_1 = os.environ.get('TUTORIAL_LINK_1', 'https://youtu.be/Jl045VfNk28')
 
 BLACKLIST_WORDS=["il", "ayalam", "nada", "ugu", "movies", "Movies", ",", "episode", "Episode", "episodes", "web-series", "punjabi", "!", "kro", "jaldi", "bhai", "Audio", "audio", "language", "Language", "Hollywood", "All", "all", "bollywood", "Bollywood", "hd", "karo", "Karo", "fullepisode", "please", "plz", "Please", "Plz", "send", "link", "Link", "#request", ":", "'", "full", "Full", "movie", "Movie", "dubb", "dabbed", "dubbed", "season", "Season", "web", "series", "Web", "Series", "webseries", "WebSeries", "upload", "HD", "Hd", "bhejo", "ful", "Send", "Bhejo", "send maadi", "send madi", "kalisi"]
 
